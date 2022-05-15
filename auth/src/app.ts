@@ -10,13 +10,17 @@ import { signupRouter } from './routes/signup';
 import { errorHandler, NotFoundError } from '@minotec/common';
 
 
+// Changes to pass a production
+// signed: false,
+// secure: process.env.NODE_ENV !== 'test'
+
 const app = express();
 app.set('trust proxy', true);
 app.use(json());
 app.use(
   cookieSession({
     signed: false,
-    secure: process.env.NODE_ENV !== 'test'
+    secure: false
   })
 );
 

@@ -9,13 +9,17 @@ import { createTicketRouter } from './routes/new';
 import { indexTicketRouter } from './routes';
 import { updateTicketRouter } from './routes/update';
 
+// Changes to pass a production
+// signed: false,
+// secure: process.env.NODE_ENV !== 'test'
+
 const app = express();
 app.set('trust proxy', true);
 app.use(json());
 app.use(
   cookieSession({
     signed: false,
-    secure: process.env.NODE_ENV !== 'test'
+    secure: false
   })
 );
 app.use(currentUser);
