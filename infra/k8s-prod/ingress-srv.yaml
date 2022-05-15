@@ -7,7 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: 'true'
 spec:
   rules:
-    - host: www.front.minotec.co
+    - host: www.ticketing-app-test-prod.sbs
       http:
         paths:
           - path: /api/payments/?(.*)
@@ -51,7 +51,7 @@ kind: Service
 metadata:
   annotations:
     service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: 'true'
-    service.beta.kubernetes.io/do-loadbalancer-hostname: 'www.front.minotec.co'
+    service.beta.kubernetes.io/do-loadbalancer-hostname: 'www.ticketing-app-test-prod.sbs'
   labels:
     helm.sh/chart: ingress-nginx-2.0.3
     app.kubernetes.io/name: ingress-nginx
