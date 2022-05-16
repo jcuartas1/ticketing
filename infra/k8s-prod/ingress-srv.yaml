@@ -52,7 +52,6 @@ metadata:
   annotations:
     service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: 'true'
     service.beta.kubernetes.io/do-loadbalancer-hostname: 'www.ticketing-app-test-prod.sbs'
-    service.beta.kubernetes.io/do-loadbalancer-protocol: 'https'
   labels:
     helm.sh/chart: ingress-nginx-2.0.3
     app.kubernetes.io/name: ingress-nginx
