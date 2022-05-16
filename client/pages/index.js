@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 
 const Landing = ({currentUser, tickets}) => {
-
+console.log(tickets)
   const tickeList = tickets.map(ticket => {
     return (
       <tr key={ ticket.id }>
