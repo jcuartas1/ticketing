@@ -54,7 +54,7 @@ metadata:
     service.beta.kubernetes.io/do-loadbalancer-hostname: 'www.ticketing-app-test-prod.sbs'
   labels:
     helm.sh/chart: ingress-nginx-4.0.1
-    app.kubernetes.io/component: admission-webhook
+    # app.kubernetes.io/component: admission-webhook
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/instance: ingress-nginx
     app.kubernetes.io/version: 1.0.0
